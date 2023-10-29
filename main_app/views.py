@@ -7,4 +7,4 @@ def home(request):
   return HttpResponse('<h1>Recipe Organizer Home Page</h1>')
 
 def about(request):
-  return HttpResponse('<h1>About Recipe Organizer</h1>')
+  return render(request, 'about.html')
