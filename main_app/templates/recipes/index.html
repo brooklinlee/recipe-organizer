@@ -3,6 +3,28 @@
 
 {% block head %}
 
-<h1>This is the Index View</h1>
+<!-- broken link -->
+<link 
+  rel="stylesheet" 
+  type="'text/css"
+  href="{% static 'css/recipes/recipe-index.css'%}"
+  />
+
+{% endblock %}
+
+{% block content%}
+
+<h1>All Recipes</h1>
+
+  <div>
+    {% for recipe in recipes %}
+      <h2>{{ recipe.name }}</h2>
+      <p>{{ recipe.cuisine }}</p>
+      <p>{{ recipe.time }}</p>
+      <p>{{ recipe.feeds }}</p>
+    {% endfor %}
+    </div>
+
+</section>
 
 {% endblock %}
