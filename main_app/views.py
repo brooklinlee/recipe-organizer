@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Recipe
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 # Create your views here.
 def home(request):
@@ -20,4 +20,11 @@ def recipe_detail(request, recipe_id):
 class RecipeCreate(CreateView):
   model = Recipe
   fields = '__all__'
-  # success_url = '/recipes/'
+
+class RecipeUpdate(UpdateView):
+  model = Recipe
+  fields = '__all__'
+
+class RecipeDelete(DeleteView):
+  model = Recipe
+  success_url = '/recipes/'

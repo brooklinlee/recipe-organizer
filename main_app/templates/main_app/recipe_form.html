@@ -7,6 +7,11 @@
 
 {% block content%}
 
+  {% if recipe %}
+    <h1>Edit {{ recipe.name }}</h1>
+  {% else %}
+    <h1>Add a New Recipe</h1>
+  {% endif %}
 <form method="post" class="form">
   {% csrf_token %}
   <table>
