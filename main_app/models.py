@@ -19,3 +19,6 @@ class Recipe(models.Model):
   time = models.IntegerField()
   feeds = models.IntegerField()
   recipe = models.TextField(max_length = 500)
+  
+  def __str__(self):
+    return self.name
