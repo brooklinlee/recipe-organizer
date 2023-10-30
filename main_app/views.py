@@ -20,3 +20,4 @@ def recipe_detail(request, recipe_id):
 class RecipeCreate(CreateView):
   model = Recipe
   fields = '__all__'
+  # success_url = '/recipes/'
