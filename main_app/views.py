@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Recipe
+from django.views.generic.edit import CreateView
 
 from django.http import HttpResponse
 
@@ -31,3 +32,7 @@ def recipe_index(request):
 def recipe_detail(request, recipe_id):
   recipe = Recipe.objects.get(id=recipe_id)
   return render(request, 'recipes/detail.html', { 'recipe': recipe })
+
+class RecipeCreate(CreateView):
+  model = Recipe
+  fields = '__all__'

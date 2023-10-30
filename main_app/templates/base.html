@@ -29,8 +29,9 @@
         >
       </a>
       <ul>
-        <li><a href="/about">About</a></li>
-        <li><a href="/recipes">Recipes</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'recipe-index' %}">Recipes</a></li>
+        <li><a href="{% url 'recipe-create' %}">New Recipe</a></li>
       </ul>
     </nav>
   </header>
