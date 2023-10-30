@@ -17,7 +17,8 @@
 
 <div>
   {% for recipe in recipes %}
-    <a href="/recipes/{{ recipe.id }}" class="recipe-name">
+    <!-- <a href="/recipes/{{ recipe.id }}" class="recipe-name"> -->
+    <a href="{% url 'recipe-detail' recipe.id %}" class="recipe-name">
       <h3>{{ recipe.name }}</h3>
     </a>
     <p>{{ recipe.cuisine }}</p>
