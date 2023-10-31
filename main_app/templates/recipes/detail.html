@@ -22,5 +22,13 @@
   <a href="{% url 'recipe-update' recipe.id %}" >Edit</a>
   <a href="{% url 'recipe-delete' recipe.id %}" >Delete</a>
 </div>
+<div>
+  <h1>Cooking Events</h1>
+{% for cooking_evt in recipe.cooking_events.all %}
+  <p>{{ cooking_evt.date }}</p>
+  <p>{{ cooking_evt.notes }}</p>
+{% endfor %}
+
+</div>
 
 {% endblock %}

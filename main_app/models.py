@@ -15,7 +15,7 @@ class Recipe(models.Model):
   cuisine = models.CharField(
     max_length=20,
     choices=CUISINE_CHOICES,
-    default='american'
+    default=CUISINE_CHOICES[0][0]
   )
   time = models.IntegerField()
   feeds = models.IntegerField()
@@ -26,3 +26,12 @@ class Recipe(models.Model):
   
   def get_absolute_url(self):
     return reverse('recipe-detail', kwargs={'recipe_id': self.id})
+  
+class CookingEvent(models.Model):
+  date = models.DateField('Cooking Event Date')
+  notes = models.CharField(max_length = 255)
+
+  recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name='cooking_events')
+
+  def __str__(self):
+    return f"{self.recipe} on {self.date}"
