@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Recipe
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from .forms import CookingEventForm
 
 # Create your views here.
 def home(request):
@@ -15,7 +16,8 @@ def recipe_index(request):
 
 def recipe_detail(request, recipe_id):
   recipe = Recipe.objects.get(id=recipe_id)
-  return render(request, 'recipes/detail.html', { 'recipe': recipe })
+  cooking_event_form = CookingEventForm()
+  return render(request, 'recipes/detail.html', { 'recipe': recipe, 'cooking_event_form': cooking_event_form })
 
 class RecipeCreate(CreateView):
   model = Recipe

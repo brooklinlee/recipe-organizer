@@ -23,12 +23,23 @@
   <a href="{% url 'recipe-delete' recipe.id %}" >Delete</a>
 </div>
 <div>
+  <h3>Add a Cooking Event</h3>
+  <form
+    method="post"
+    autocomplete="off"
+  >
+    {% csrf_token %}
+    {{ cooking_event_form.as_p }}
+    <button type="submit">Add Cooking Event</button>
+</form>
+</div>
+<div>
   <h1>Cooking Events</h1>
 {% for cooking_evt in recipe.cooking_events.all %}
   <p>{{ cooking_evt.date }}</p>
   <p>{{ cooking_evt.notes }}</p>
 {% endfor %}
-
 </div>
+
 
 {% endblock %}
