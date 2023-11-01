@@ -14,26 +14,34 @@
   {% block content %}  
 
 <main>
-  <div class="contact-info">
-    <h1>Nice to </br>Meet You!</h1>
-    <p>
-      Welcome to the Yum Yum Hub web app! Our platform is your personal kitchen companion, designed to help you record and organize your favorite recipes.
-    </p>
-    <p>With Yum Yum Hub, you can easily create and store your culinary masterpieces, track cooking events for when you've prepared a recipe, and add valuable notes to enhance your future cooking experiences.</p>
-    <p>Whether you're a seasoned chef or a novice in the kitchen, Yum Yum Hub is your go-to tool for making and improving your beloved recipes, ensuring every dish you create is a delicious success, today and for years to come!</p>
-    <h1>Meet the Developer</h1>
-    <p>Contact info here</p>
-    <p>LinkedIn</p>
-    <p>LinkedIn</p>
-    <p>GitHub</p>
-    <p>GitHub</p>
-  </div>
-  <div class="dev">
-    <img 
-      src="{% static "images/dev-alt.svg" %}"
-      alt="Image of Brooklin, the developer"
-    >
-  </div>
+  <section>
+    <div class="contact-info">
+      <h1>Nice to </br>Meet You!</h1>
+      <p>
+        Welcome to the Yum Yum Hub web app! Our platform is your personal kitchen companion, designed to help you record and organize your favorite recipes.
+      </p>
+      <p>With Yum Yum Hub, you can easily create and store your culinary masterpieces, track cooking events for when you've prepared a recipe, and add valuable notes to enhance your future cooking experiences.</p>
+      <p>Whether you're a seasoned chef or a novice in the kitchen, Yum Yum Hub is your go-to tool for making and improving your beloved recipes, ensuring every dish you create is a delicious success, today and for years to come!</p>
+    </div>
+    <div class="dev">
+      <img 
+        src="{% static "images/dev-alt.svg" %}"
+        alt="Image of Brooklin, the developer"
+      >
+    </div>
+  </section>
+  <section class="btm-section">
+    <div>
+      <h1 class="meet">Meet the Developer!</h1>
+      <div class="bio">
+        <p >Hi! My name is Brooklin, and I had so much fun developing this app! If you're interested in seeing more of my work, check out my LinkedIn and GitHub below 👇</p>
+      </div>
+    </div>
+    <div class="logo-container">
+        <a href="https://www.linkedin.com/in/brooklin-lee"><img src="{% static "images/linkedin.svg" %}" alt="linkedIn logo" class="logo"></a>
+        <a href="https://github.com/brooklinlee"><img src="{% static "images/github.svg" %}" alt="GitHub logo" class="logo"></a>
+    </div>
+  </section>
 </main>
 
 {% endblock %}
