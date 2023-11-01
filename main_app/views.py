@@ -58,3 +58,7 @@ class IngredientUpdate(UpdateView):
 class IngredientDelete(DeleteView):
   model = Ingredient
   success_url = '/ingredients'
+
+def assoc_ingredient(request, recipe_id, ingredient_id):
+  Recipe.objects.get(id=recipe_id).ingredients.add(ingredient_id)
+  return redirect('recipe-detail', recipe_id=recipe_id)

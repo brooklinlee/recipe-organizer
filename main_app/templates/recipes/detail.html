@@ -37,9 +37,8 @@
   <h3>{{ recipe.name }}'s Main Ingredients</h3>
   <div>
     {% if recipe.ingredients.count %}
-      {% for ingredient in recipe.ingregients.all %}
-        <p>{{ ingredient.name }}</p>
-        <p>{{ ingredient.food_group }}</p>
+      {% for ingredient in recipe.ingredients.all %}
+        <p>{{ ingredient.name }} - <em>{{ ingredient.food_group }}</em></p>
       {% endfor %}
     {% else %}  
       <p>{{recipe.name}} has no associated ingredients</p>
@@ -53,9 +52,9 @@
         <a href="{% url 'ingredient-detail' ingredient.id %}">
           <p>{{ ingredient.name }} - <em>{{ ingredient.food_group }}</em></p>
         </a>
-        <form action="" method="post">
+        <form action="{% url 'assoc-ingredient' recipe.id ingredient.id %}" method="post">
           {% csrf_token %}
-          <button type="submit" class="btn submit">Add an Ingredient</button>
+          <button type="submit" >Add Ingredient to Recipe</button>
         </form>
       {% endfor %}
     {% else %}
