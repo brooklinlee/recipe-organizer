@@ -3,29 +3,46 @@ main {
   flex-direction: row;
   justify-content: space-evenly;
   padding: 15px;
-  height: 100%;
+  /* height: 100%; */
   gap: 5px;
+  /* flex-wrap: wrap; */
 }
 
 h1, p {
   text-align: left;
-  color: var(--primary)
+  color: var(--primary);
+  margin-left: 6%;
 }
 
 p {
-  font-weight: 800;
+  margin-bottom: 2%;
 }
 
 img {
-  height: 80vh;
-
+  /* height: 80vh; */
+  margin-right: -8%;
+  float: right;
 }
 
 .contact-info{
-  width: 50vh;
+  width: 50%;
 }
 
 .dev-img {
   display: flex;
   justify-content: center;
+  width: 30%;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img  {
+    height: auto;
+    max-width: 100%;
+    float: none;
+  }
 }
