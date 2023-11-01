@@ -1,0 +1,21 @@
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 15px;
+  height: 100%;
+  gap: 5px;
+}
+
+h1, p {
+  text-align: left;
+  color: var(--primary)
+}
+
+p {
+  font-weight: 800;
+}
+
+img {
+  height: 80vh;
+}
