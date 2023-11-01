@@ -17,10 +17,28 @@ h1 {
   font-size: 100px;
 }
 
+h3, .cusine {
+  font-weight: 800;
+}
+
 .recipe-card {
   background-color: var(--background);
   border-radius: 16px;
   width: 80%;
-  margin: 0 auto;
+  margin: 24px auto;
+  padding: 15px;
+  gap: 5px;
+}
+.recipe-info {
+  display: flex;
+  justify-content: flex-start;
+  width: fit-content;
 }
 
+.recipe-info > p {
+  margin-right: 24px;
+}
+
+.recipe-info > p:first-child> {
+  font-weight: 800;
+}
