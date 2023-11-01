@@ -16,4 +16,5 @@ urlpatterns = [
   path('ingredients/', views.IngredientList.as_view(), name='ingredient-index'),
   path('ingredients/<int:pk>/update', views.IngredientUpdate.as_view(), name='ingredient-update'),
   path('ingredients/<int:pk>/delete', views.IngredientDelete.as_view(), name='ingredient-delete'),
+  path('accounts/signup/', views.signup, name='signup'),
 ]
