@@ -33,6 +33,22 @@
   <a href="{% url 'recipe-delete' recipe.id %}" >Delete</a>
 </div>
 <div>
+  <h1>Add an Ingredient</h1>
+  <h3>{{ recipe.name }}'s Main Ingredients</h3>
+  <div>
+    {% if recipe.ingredients.count %}
+      {% for ingredient in recipe.ingregients.all %}
+        <p>{{ ingredient.name }}</p>
+        <p>{{ ingredient.food_group }}</p>
+      {% endfor %}
+    {% else %}  
+      <p>{{recipe.name}} has no associated ingredients</p>
+    {% endif %}  
+    <h3>Available Ingredients</h3>
+    <!-- display available ingredients here -->
+  </div>
+</div>
+<div>
   <h3>Add a Cooking Event</h3>
   <form
     action="{% url 'add-cooking-event' recipe.id %}"

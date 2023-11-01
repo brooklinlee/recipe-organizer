@@ -17,12 +17,13 @@ def recipe_index(request):
 
 def recipe_detail(request, recipe_id):
   recipe = Recipe.objects.get(id=recipe_id)
+  ingredients_recipe_doesnt_have = Ingredient.objects.exclude(id__in = recipe.ingredients.all().values_list('id'))
   cooking_event_form = CookingEventForm()
-  return render(request, 'recipes/detail.html', { 'recipe': recipe, 'cooking_event_form': cooking_event_form })
+  return render(request, 'recipes/detail.html', { 'recipe': recipe, 'cooking_event_form': cooking_event_form, 'ingredients': ingredients_recipe_doesnt_have })
 
 class RecipeCreate(CreateView):
   model = Recipe
-  fields = '__all__'
+  fields = ['name', 'cuisine', 'time', 'feeds', 'recipe']
 
 class RecipeUpdate(UpdateView):
   model = Recipe
