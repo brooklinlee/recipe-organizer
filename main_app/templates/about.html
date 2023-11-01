@@ -1,9 +1,34 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block content %}
+{% block head %}
 
-<h1>About the Recipe Organizer</h1>
+<link 
+  rel="stylesheet" 
+  type="text/css"
+  href="{% static 'css/about.css' %}"
+  />
 
-<p>A place for you to keep all of your favorite recipes and record when you've made them</p>
+  {% endblock %}
+
+  {% block content %}  
+
+<main>
+  <div>
+    <h1>Nice to Meet You</h1>
+    <p>
+      Welcome to the Yum Yum Hub web app! Our platform is your personal kitchen companion, designed to help you record and organize your favorite recipes. With Yum Yum Hub, you can easily create and store your culinary masterpieces, track cooking events for when you've prepared a recipe, and add valuable notes to enhance your future cooking experiences. Whether you're a seasoned chef or a novice in the kitchen, Yum Yum Hub is your go-to tool for making and improving your beloved recipes, ensuring every dish you create is a delicious success, today and for years to come!
+    </p>
+    <h1>Meet the Developer</h1>
+    <p>Contact info here</p>
+  </div>
+  <div>
+    <img 
+      src="{% static "images/dev.svg" %}"
+      alt="The Recipe Organizer Logo"
+    >
+  </div>
+
+</main>
 
 {% endblock %}

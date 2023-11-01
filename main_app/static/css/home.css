@@ -6,9 +6,19 @@ html, body {
 
 main {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .white-card {
   background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 16px;
+}
+
+.white-card > a {
+  padding: 40px;
 }
