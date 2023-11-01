@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Recipe
+from .models import Recipe, Ingredient
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .forms import CookingEventForm
 
@@ -38,3 +38,7 @@ def add_cooking_event(request, recipe_id):
     new_cooking_event.recipe_id = recipe_id
     new_cooking_event .save()
   return redirect('recipe-detail', recipe_id=recipe_id)
+
+class IngredientCreate(CreateView):
+  model = Ingredient
+  fields = '__all__'
