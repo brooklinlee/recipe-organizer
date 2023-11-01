@@ -12,5 +12,11 @@
 {% block content %}
 
 <h1>All Ingredients</h1>
+{% for ingredient in ingredient_list %}
+  <a href="{% url 'ingredient-detail' ingredient.id %}">
+    <h3>{{ ingredient.name }}</h3>
+    <h3>{{ ingredient.food_group }}</h3>
+  </a>
+{% endfor %}
 
 {% endblock %}
