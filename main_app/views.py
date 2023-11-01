@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Recipe, Ingredient
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .forms import CookingEventForm
+from django.views.generic import ListView, DetailView
 
 # Create your views here.
 def home(request):
@@ -42,3 +43,9 @@ def add_cooking_event(request, recipe_id):
 class IngredientCreate(CreateView):
   model = Ingredient
   fields = '__all__'
+
+class IngredientList(ListView):
+  model = Ingredient
+
+class IngredientDetail(DetailView):
+  model = Ingredient

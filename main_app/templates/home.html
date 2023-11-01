@@ -2,13 +2,11 @@
 {% load static %}
 
 {% block head %}
-
 <link 
   rel="stylesheet" 
   type="text/css"
   href="{% static 'css/home.css' %}"
   />
-
 {% endblock %}
 
 {% block content %}
@@ -25,6 +23,7 @@
       <a href="{% url 'about' %}">About</a>
       <a href="{% url 'recipe-index' %}">Recipes</a>
       <a href="{% url 'recipe-create' %}">Add Recipe</a>
+      <a href="{% url 'ingredient-index' %}">Ingredients</a>
       <a href="{% url 'ingredient-create' %}">Add Ingredient</a>
     </div>
   </div>
