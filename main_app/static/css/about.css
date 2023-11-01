@@ -1,7 +1,7 @@
 main {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 15px;
   height: 100%;
   gap: 5px;
@@ -18,4 +18,14 @@ p {
 
 img {
   height: 80vh;
+
+}
+
+.contact-info{
+  width: 50vh;
+}
+
+.dev-img {
+  display: flex;
+  justify-content: center;
 }

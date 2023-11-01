@@ -13,19 +13,22 @@
 
 {% block content%}
 
-<h1>All Recipes</h1>
+<main>
+  <h1>Your Recipes</h1>
+  
+  <div class="recipe-card">
+    {% for recipe in recipes %}
+      <a href="{% url 'recipe-detail' recipe.id %}" class="recipe-name">
+        <h3>{{ recipe.name }}</h3>
+      </a>
+      <p>{{ recipe.cuisine }}</p>
+      <p>{{ recipe.time }}</p>
+      <p>{{ recipe.feeds }}</p>
+    {% endfor %}
+    </div>
 
-<div>
-  {% for recipe in recipes %}
-    <!-- <a href="/recipes/{{ recipe.id }}" class="recipe-name"> -->
-    <a href="{% url 'recipe-detail' recipe.id %}" class="recipe-name">
-      <h3>{{ recipe.name }}</h3>
-    </a>
-    <p>{{ recipe.cuisine }}</p>
-    <p>{{ recipe.time }}</p>
-    <p>{{ recipe.feeds }}</p>
-  {% endfor %}
-  </div>
+</main>
+
 
 
 {% endblock %}

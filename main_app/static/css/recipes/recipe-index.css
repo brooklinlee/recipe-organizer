@@ -1,4 +1,26 @@
-.recipe-name {
-  color: var(--primary);
+body {
+  background-color: var(--primary);
+}
+
+main {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0 auto;
+  color: var(--background);
+  padding: 24px;
+  padding-bottom: 36px ;
+  font-size: 100px;
+}
+
+.recipe-card {
+  background-color: var(--background);
+  border-radius: 16px;
+  width: 80%;
+  margin: 0 auto;
 }
 
