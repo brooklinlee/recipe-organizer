@@ -3,3 +3,12 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.white-card {
+  background-color: var(--background);
+}
