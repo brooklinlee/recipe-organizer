@@ -10,11 +10,9 @@ main {
 }
 
 h1 {
-  margin: 0 auto;
   color: var(--background);
-  padding: 24px;
-  padding-bottom: 36px ;
-  font-size: 100px;
+  font-size: 80px;
+  text-align: center;
 }
 
 h3, .cusine {
