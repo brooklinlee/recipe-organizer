@@ -20,13 +20,20 @@
     >
   </div>
   <div>
-    <div class="white-card">
+    {% comment %} <div class="white-card">
       <a href="{% url 'about' %}">About</a>
       <a href="{% url 'recipe-index' %}">Recipes</a>
       <a href="{% url 'recipe-create' %}">Add Recipe</a>
       <a href="{% url 'ingredient-index' %}">Ingredients</a>
       <a href="{% url 'ingredient-create' %}">Add Ingredient</a>
-    </div>
+    </div> {% endcomment %}
+    <form action="{% url 'home' %}" method="post" class="login">
+      <h1>Login</h1>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="hidden" name="next" value="{{ next }}">
+      <button type="submit" class="btn submit">Login</button>
+    </form>
   </div>
 </main>
 

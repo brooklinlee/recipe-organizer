@@ -3,10 +3,11 @@ from .models import Recipe, Ingredient
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .forms import CookingEventForm
 from django.views.generic import ListView, DetailView
+from django.contrib.auth.views import LoginView
 
 # Create your views here.
-def home(request):
-  return render(request, 'home.html')
+class Home(LoginView):
+  template_name = 'home.html'
 
 def about(request):
   return render(request, 'about.html')
@@ -62,3 +63,4 @@ class IngredientDelete(DeleteView):
 def assoc_ingredient(request, recipe_id, ingredient_id):
   Recipe.objects.get(id=recipe_id).ingredients.add(ingredient_id)
   return redirect('recipe-detail', recipe_id=recipe_id)
+
