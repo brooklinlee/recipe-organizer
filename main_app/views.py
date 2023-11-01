@@ -49,3 +49,11 @@ class IngredientList(ListView):
 
 class IngredientDetail(DetailView):
   model = Ingredient
+
+class IngredientUpdate(UpdateView):
+  model = Ingredient
+  fields = ['name', 'food_group']
+
+class IngredientDelete(DeleteView):
+  model = Ingredient
+  success_url = '/ingredients'

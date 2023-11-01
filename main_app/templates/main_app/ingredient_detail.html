@@ -14,8 +14,15 @@
 <h1>{{ ingredient.name }} </h1>
 <h1>{{ ingredient.food_group }} </h1>
 
+<a href="{% url 'ingredient-update' pk=ingredient.pk %}">
+  <button>Edit Ingredient</button>
+</a>
+<a href="{% url 'ingredient-delete' pk=ingredient.pk %}">
+  <button>Delete Ingredient</button>
+</a>
 <a href="{% url 'ingredient-index' %}">
   <button>Back to All Ingredients</button>
 </a>
+
 
 {% endblock %}
