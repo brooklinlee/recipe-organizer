@@ -17,6 +17,7 @@ class Ingredient(models.Model):
     choices=FOOD_GROUP_CHOICES,
     default=FOOD_GROUP_CHOICES[0][0]
   )
+  
 
   def __str__(self):
     return self.name
@@ -43,6 +44,7 @@ class Recipe(models.Model):
   time = models.IntegerField()
   feeds = models.IntegerField()
   recipe = models.TextField(max_length = 500)
+  ingredients = models.ManyToManyField(Ingredient)
   
   def __str__(self):
     return self.name
