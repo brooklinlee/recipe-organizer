@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Recipe
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .forms import CookingEventForm
@@ -30,3 +30,11 @@ class RecipeUpdate(UpdateView):
 class RecipeDelete(DeleteView):
   model = Recipe
   success_url = '/recipes/'
+
+def add_cooking_event(request, recipe_id):
+  form = CookingEventForm(request.POST)
+  if form.is_valid():
+    new_cooking_event = form.save(commit=False)
+    new_cooking_event.recipe_id = recipe_id
+    new_cooking_event .save()
+  return redirect('recipe-detail', recipe_id=recipe_id)

@@ -35,3 +35,6 @@ class CookingEvent(models.Model):
 
   def __str__(self):
     return f"{self.recipe} on {self.date}"
+  
+  class Meta:
+    ordering = ['-date']

@@ -2,14 +2,24 @@
 {% load static %}
 
 {% block head %}
-
+<link 
+  href="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.css" 
+  rel="stylesheet" 
+/>
+<link rel="stylesheet" href="{% static 'css/mcdp.css' %}">
+<script 
+  src="https://cdn.jsdelivr.net/npm/mc-datepicker/dist/mc-calendar.min.js"
+>
+</script>
 <link 
   rel="stylesheet" 
   type="text/css"
   href="{% static 'css/recipes/recipe-detail.css' %}"
   />
 
+  <script defer src="{% static 'js/recipe_detail.js' %}"></script>
 {% endblock %}
+
 
 {% block content%}
 
@@ -25,6 +35,7 @@
 <div>
   <h3>Add a Cooking Event</h3>
   <form
+    action="{% url 'add-cooking-event' recipe.id %}"
     method="post"
     autocomplete="off"
   >
@@ -35,11 +46,24 @@
 </div>
 <div>
   <h1>Cooking Events</h1>
-{% for cooking_evt in recipe.cooking_events.all %}
-  <p>{{ cooking_evt.date }}</p>
-  <p>{{ cooking_evt.notes }}</p>
-{% endfor %}
-</div>
-
+  {% if recipe.cooking_events.all %}
+    <table>
+      <thead>
+        <tr><th>Date</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        {% for cooking_evt in recipe.cooking_events.all %}
+          <tr>
+            <td>{{ cooking_evt.date }}</td>
+            <td>{{ cooking_evt.notes }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <div>
+      <p>You have never made {{ recipe.name }}</p>
+    </div>
+  {% endif %}
 
 {% endblock %}
