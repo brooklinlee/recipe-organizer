@@ -43,9 +43,24 @@
       {% endfor %}
     {% else %}  
       <p>{{recipe.name}} has no associated ingredients</p>
-    {% endif %}  
+    {% endif %}
+  </div>  
+  <div>
     <h3>Available Ingredients</h3>
     <!-- display available ingredients here -->
+    {% if ingredients.count %}
+      {% for ingredient in ingredients.all %}
+        <a href="{% url 'ingredient-detail' ingredient.id %}">
+          <p>{{ ingredient.name }} - <em>{{ ingredient.food_group }}</em></p>
+        </a>
+        <form action="" method="post">
+          {% csrf_token %}
+          <button type="submit" class="btn submit">Add an Ingredient</button>
+        </form>
+      {% endfor %}
+    {% else %}
+      <p>{{ recipe.name }} already has all the available ingredients </p>
+    {% endif%}    
   </div>
 </div>
 <div>
