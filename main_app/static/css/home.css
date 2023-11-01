@@ -1,32 +1,62 @@
 html, body {
   background-image: url('../images/YumYumHub.svg');
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
 }
 
 main {
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  flex-direction: row;
-  flex-wrap: wrap;
-  /* align-items: center; */
+  gap: 16px;
 }
 
-/* .text-logo{
-  display: flex;
-  justify-content: center;
-}  */
+h1 {
+  color: var(--primary);
+}
+
+hr {
+  color: var(--primary);
+  margin-right: 40%;
+}
+
+label {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+input {
+  margin-bottom: 10%;
+}
+
+.text-logo{
+  width: 50%;
+  margin-left: 6%;
+  margin-right: 4%;
+}
+
+.right-div {
+  width: 100%;
+}
 
 .white-card {
   background-color: var(--background);
-  display: flex;
+  display: flex; 
   flex-direction: column;
-  height: fit-content;
-  width: fit-content;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 100%;
   border-radius: 16px;
+  padding-left: 8%;
+  margin: 2%;
 }
 
 .white-card > a {
-  padding: 40px;
+  font-size: 20px;
 }
 
+.login-card{
+  background-color: var(--background);
+  height: 60%;
+
+}

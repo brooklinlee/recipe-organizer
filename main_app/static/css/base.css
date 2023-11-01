@@ -13,10 +13,9 @@ html, body {
   /* background-image: url('../images/YumYumHub.svg');
   background-repeat: no-repeat;
   background-size: cover; */
-
+  
   --primary: #D66049;
   --background: #FBF4EF;
-  --card-background: white;
   --border: rgb(220, 220, 220);
 }
 
@@ -30,33 +29,37 @@ body {
   padding-top: 80px;
 }
 
-article img {
-  width: 80px;
+button {
+  font-family:'Raleway', sans-serif;
+  font-weight: 800;
+  padding: 4% 8%;
+  background-color: var(--primary);
+  color: var(--background);
+  border-radius: 8px;
+  border: none;
 }
 
 h1, h3 { margin: 7px 0px 14px 0px; }
 
 h1 {
   font-family: 'Pacifico', cursive;
-  /* font-size: 28px; */
-  font-weight: 600;
 }
 
-h3 {
+/* h3 {
   font-size: 20px;
   font-weight: 500;
-}
+} */
 
-h4 {
+/* h4 {
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 2px;
-}
+} */
 
-h5 {
+/* h5 {
   font-size: 12px;
   font-weight: 500;
-}
+} */
 
 p {
   margin: 0;
@@ -66,24 +69,11 @@ p {
 }
 
 a {
-  color: var var(--background);
-  font-weight: 600;
+  color: var(--primary);
+  font-weight: 800;
   text-decoration: none;
 }
 
-/* form {
-  width: 100%;
-  display: flex;
-  max-width: 500px;
-  border-radius: 5px;
-  flex-direction: column;
-  background-color: white;
-  padding: 21px 21px 28px 21px;
-  border: 1px solid rgb(220, 220, 220);
-  box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
-  -moz-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
-  -webkit-box-shadow: -1px 5px 19px -5px rgba(0,0,0,0.25);
-} */
 
 /* Nav Bar */
 .container {
