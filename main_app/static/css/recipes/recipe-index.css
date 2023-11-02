@@ -5,8 +5,8 @@ body {
 main {
   background-color: var(--primary);
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  flex-direction: column-reverse;
 }
 
 h1 {
@@ -15,8 +15,13 @@ h1 {
   text-align: center;
 }
 
-h3, .cusine {
+h3, .cusine, p {
   font-weight: 800;
+}
+
+.rc-cont {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .recipe-card {
@@ -26,7 +31,14 @@ h3, .cusine {
   margin: 24px auto;
   padding: 15px;
   gap: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
 }
+
 .recipe-info {
   display: flex;
   justify-content: flex-start;
@@ -39,4 +51,38 @@ h3, .cusine {
 
 .recipe-info > p:first-child> {
   font-weight: 800;
+}
+
+
+.ingredient-card {
+  flex-basis: calc(33.33% - 40px); 
+  margin: 10px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-color: var(--background);
+  border-radius: 16px;
+  height: 300px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.recipe-card:hover {
+  background-color: var(--primary);
+  border-color: var(--background); 
+  color: var(--background);
+}
+
+.recipe-card a {
+  color: inherit; 
+}
+
+a > h3 {
+  font-size: 40px;
+}
+
+a > p {
+  font-size: 30px;
 }
