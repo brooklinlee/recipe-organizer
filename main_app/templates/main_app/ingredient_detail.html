@@ -5,24 +5,26 @@
 <link 
   rel="stylesheet" 
   type="text/css"
-  href="{% static 'css/ingredients/ingredient_detail.css' %}"
+  href="{% static 'css/recipes/ingredients/ingredient-detail.css' %}"
   />
 {% endblock %}
 
 {% block content %}
 
 <h1>{{ ingredient.name }} </h1>
-<h1>{{ ingredient.food_group }} </h1>
+<h3>{{ ingredient.food_group }} </h3>
+<div class="btn-cont">
+  <a href="{% url 'ingredient-update' pk=ingredient.pk %}">
+    <button>Edit Ingredient</button>
+  </a>
+  <a href="{% url 'ingredient-delete' pk=ingredient.pk %}">
+    <button>Delete Ingredient</button>
+  </a>
+  <a href="{% url 'ingredient-index' %}">
+    <button>Back to All Ingredients</button>
+  </a>
 
-<a href="{% url 'ingredient-update' pk=ingredient.pk %}">
-  <button>Edit Ingredient</button>
-</a>
-<a href="{% url 'ingredient-delete' pk=ingredient.pk %}">
-  <button>Delete Ingredient</button>
-</a>
-<a href="{% url 'ingredient-index' %}">
-  <button>Back to All Ingredients</button>
-</a>
+</div>
 
 
 {% endblock %}
