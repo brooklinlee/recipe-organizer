@@ -35,21 +35,21 @@
     <div class="btns">
       <a href="{% url 'recipe-update' recipe.id %}" ><button>Edit Recipe</button></a>
       <a href="{% url 'recipe-delete' recipe.id %}" ><button>Delete Recipe</button></a>
-
     </div>
   </div>
-  <div>
-    <h1>Add an Ingredient</h1>
-    <h3>{{ recipe.name }}'s Main Ingredients</h3>
-    <div>
-      {% if recipe.ingredients.count %}
-        {% for ingredient in recipe.ingredients.all %}
-          <p>{{ ingredient.name }} - <em>{{ ingredient.food_group }}</em></p>
-        {% endfor %}
-      {% else %}  
-        <p>{{recipe.name}} has no associated ingredients</p>
-      {% endif %}
-    </div>  
+  <div >
+    <div class="ingredients-div">
+      <h1 class="ing-label">Main Ingredients:</h1>
+      <div class="ing-list">
+        {% if recipe.ingredients.count %}
+          {% for ingredient in recipe.ingredients.all %}
+            <p>{{ ingredient.name }} - <em>{{ ingredient.food_group }}</em></p>
+          {% endfor %}
+        {% else %}  
+          <p>{{recipe.name}} has no associated ingredients</p>
+        {% endif %}
+      </div>  
+    </div>
     <div>
       <h3>Available Ingredients</h3>
       <!-- display available ingredients here -->

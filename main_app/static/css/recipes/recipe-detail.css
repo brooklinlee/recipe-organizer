@@ -12,20 +12,21 @@ h1 {
 }
 
 .cuisine {
-  color: var(--primary);
+  /* color: var(--primary); */
   font-size: 24px;
   text-align: center;
-  font-weight: 800;
+  /* font-weight: 800; */
   margin-top: 0;
   margin-bottom: 1%;
   padding-top: 0;
+  color: #000000;
 }
 
 .recipe-info {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-weight: 800;
+  /* font-weight: 800; */
 }
 
 .recipe-info > * {
@@ -35,7 +36,7 @@ h1 {
 }
 
 .recipe {
-  width: 80%;
+  width: 90%;
   margin: 1% auto;
 }
 
@@ -47,6 +48,29 @@ h1 {
 }
 
 button {
-  margin: 24px;
+  margin: 12px 36px 24px;
 }
 
+.ingredients-div {
+  background-color: var(--primary);
+  width: 90%;
+  margin: 24px auto;
+  border-radius: 16px;
+}
+
+.ingredients-div > * {
+  color: var(--background);
+  padding: 10px 24px;
+}
+
+.ing-label {
+  font-size: 35px;
+  margin: 0 auto;
+}
+
+.ing-list {
+
+  font-weight: 800;
+  font-size: 20px;
+
+}
