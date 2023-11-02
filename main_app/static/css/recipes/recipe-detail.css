@@ -85,7 +85,7 @@ button {
   flex-wrap: wrap;
 }
 
-.avail-cont {
+.avail-cont, .ce-cont {
   border: solid var(--primary);
   width: 90%;
   margin: 24px auto;
@@ -120,7 +120,43 @@ button {
   bottom: 0;
 }
 
+/* .ce-cont {
+  background-color: var(--primary);
+  width: 90%;
+  margin: 24px auto;
+  border-radius: 16px;
+} */
+
 form {
   display: flex;
   justify-content: center;
+}
+
+table {
+  padding: 0 40px;
+  width: 100%;
+  border-spacing: 0 20px;
+}
+
+th {
+  text-align: left;
+  padding: 6px 20px 0 0;
+  font-weight: normal;
+  vertical-align: top;
+  font-size: var(--font-reg);
+}
+
+td {
+  max-width: 60%;
+}
+
+td > * {
+  width: 100%;
+  padding: 2px 4px;
+  font-size: var(--font-l);
+}
+
+td > textarea {
+  height: calc(4 * var(--font-l) + 8px);
+  font-family: inherit;
 }
