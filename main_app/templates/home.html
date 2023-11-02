@@ -12,22 +12,27 @@
 {% block content %}
 
 <main>
+  {% if user.is_authenticated %}
   <img
   class="text-logo"
   src="{% static "images/YYH-text.svg" %}"
   alt="The Recipe Organizer Logo"
   >
-  <div class="right-div">
+  {% comment %} <div class="right-div">
     <div class="white-card">
-      {% if user.is_authenticated %}
       <a href="{% url 'about' %}">About</a>
       <a href="{% url 'recipe-index' %}">Recipes</a>
       <a href="{% url 'recipe-create' %}">Add Recipe</a>
       <a href="{% url 'ingredient-index' %}">Ingredients</a>
       <a href="{% url 'ingredient-create' %}">Add Ingredient</a>
-    </div>
+    </div> {% endcomment %}
     {% else %}
-    <div class="login-card">
+    <img
+    class="text-logo"
+    src="{% static "images/YYH-text.svg" %}"
+    alt="The Recipe Organizer Logo"
+    >
+    <div class="login-div">
       <form action="{% url 'home' %}" method="post" class="login">
         <h1>Login</h1>
         <hr></hr>

@@ -32,12 +32,13 @@ body {
 button {
   font-family:'Raleway', sans-serif;
   font-weight: 800;
-  padding: 2%;
+  padding: 10px 24px;
   text-align: center;
   background-color: var(--primary);
   color: var(--background);
-  border-radius: 8px;
+  border-radius: 16px;
   border: none;
+  font-size: 20px;
 }
 
 .btn-div {
@@ -49,6 +50,7 @@ button {
 label {
   color: var(--primary);
   font-weight: 800;
+  font-size: 18px;
 }
 
 h1, h3 { margin: 7px 0px 14px 0px; }
