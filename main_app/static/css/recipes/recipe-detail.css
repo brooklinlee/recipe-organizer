@@ -1,0 +1,47 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: var(--primary);
+  font-size: 80px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.cuisine {
+  color: var(--primary);
+  font-size: 24px;
+  text-align: center;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 1%;
+  padding-top: 0;
+}
+
+.recipe-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.recipe-info > * {
+  color: var(--primary);
+  padding: 0 4%;
+  margin-top: 0;
+}
+
+.recipe {
+  width: 60%;
+  margin: 1% auto;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
