@@ -86,10 +86,16 @@ button {
 }
 
 .avail-cont, .ce-cont {
-  border: solid var(--primary);
   width: 90%;
   margin: 24px auto;
   border-radius: 16px;
+}
+
+.ce-form-cont {
+  width: 90%;
+  margin: 24px auto;
+  border-radius: 16px;
+  border: solid var(--primary);
 }
 
 .add-ing{
@@ -119,13 +125,6 @@ button {
   float: right;
   bottom: 0;
 }
-
-/* .ce-cont {
-  background-color: var(--primary);
-  width: 90%;
-  margin: 24px auto;
-  border-radius: 16px;
-} */
 
 form {
   display: flex;
@@ -159,4 +158,12 @@ td > * {
 td > textarea {
   height: calc(4 * var(--font-l) + 8px);
   font-family: inherit;
+}
+
+@media (max-width: 768px) {
+  .ce-table form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
