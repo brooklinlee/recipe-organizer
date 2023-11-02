@@ -17,7 +17,7 @@
   <div class="ingredient-card">
     <a href="{% url 'ingredient-detail' ingredient.id %}">
       <h3>{{ ingredient.name }}</h3>
-      <h3>{{ ingredient.food_group }}</h3>
+      <p><em>{{ ingredient.food_group }}</em></p>
     </a>
   </div>
     {% endfor %}
