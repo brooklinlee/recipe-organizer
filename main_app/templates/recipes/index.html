@@ -17,6 +17,7 @@
   <div>
     <h1>Your Recipes</h1>
   </div>
+  {% if recipe.all %}
   <div class="rc-cont">
     {% for recipe in recipes %}
     <div class="recipe-card">
@@ -30,6 +31,12 @@
       </div>
     </div>
     {% endfor %}
+    {% else %}
+    <div class="no-recipes">
+      <p class="notice">Uh Oh! Looks like you don't have any recipes yet...</p>
+      <a href="{% url 'recipe-create' %}"><button class="new-recipe-btn">Make your First Recipe Here</button></a>
+    </div>
+  {% endif %}
   </div>
 </main>
 

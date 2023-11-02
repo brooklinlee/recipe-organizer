@@ -86,3 +86,19 @@ a > h3 {
 a > p {
   font-size: 30px;
 }
+
+.no-recipes {
+  text-align: center;
+}
+
+.notice{
+  color: var(--background);
+  font-size: 40px;
+  margin-top: 48px;
+  margin-bottom: 68px;
+}
+
+.new-recipe-btn {
+  background-color: var(--background);
+  color: var(--primary);
+}
