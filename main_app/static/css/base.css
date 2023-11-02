@@ -32,12 +32,28 @@ body {
 button {
   font-family:'Raleway', sans-serif;
   font-weight: 800;
-  padding: 4% 8%;
+  padding: 2%;
+  text-align: center;
   background-color: var(--primary);
   color: var(--background);
   border-radius: 8px;
   border: none;
 }
+
+.btn-div {
+  display: flex;
+  justify-content: center;
+  margin: 2% 0;
+}
+
+label {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+/* input {
+  margin-bottom: 10%;
+} */
 
 h1, h3 { margin: 7px 0px 14px 0px; }
 
@@ -45,26 +61,7 @@ h1 {
   font-family: 'Pacifico', cursive;
 }
 
-/* h3 {
-  font-size: 20px;
-  font-weight: 500;
-} */
-
-/* h4 {
-  font-size: 15px;
-  font-weight: 500;
-  margin-bottom: 2px;
-} */
-
-/* h5 {
-  font-size: 12px;
-  font-weight: 500;
-} */
-
 p {
-  /* margin: 0; */
-  /* width: 100%; */
-  /* font-size: 16px; */
   line-height: 28px;
 }
 
