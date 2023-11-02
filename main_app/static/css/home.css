@@ -10,6 +10,7 @@ main {
   display: flex;
   justify-content: space-around;
   gap: 16px;
+  margin-top: 2%;
 }
 
 h1 {
@@ -54,6 +55,7 @@ input {
 
 .white-card > a {
   font-size: 20px;
+  text-decoration: underline;
 }
 
 .login-card{

@@ -30,12 +30,12 @@ class Ingredient(models.Model):
 class Recipe(models.Model):
   name = models.CharField(max_length=100)
   CUISINE_CHOICES = [
-    ('american', 'American'),
-    ('italian', 'Italian'),
-    ('mexican', 'Mexican'),
-    ('indian', 'Indian'),
-    ('asian', 'Asian'),
-    ('other', 'Other'),
+    ('American', 'American'),
+    ('Italian', 'Italian'),
+    ('Mexican', 'Mexican'),
+    ('Indian', 'Indian'),
+    ('Asian', 'Asian'),
+    ('Other', 'Other'),
   ]
   TIME_CHOICES = [
     ('30 Minutes', '30 Minutes'),
@@ -57,7 +57,7 @@ class Recipe(models.Model):
     default=TIME_CHOICES[0][0]
   )
   feeds = models.IntegerField()
-  recipe = models.TextField(max_length = 500)
+  recipe = models.TextField(max_length = 3000)
   ingredients = models.ManyToManyField(Ingredient)
   user = models.ForeignKey(User, on_delete=models.CASCADE)
   

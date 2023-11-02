@@ -6,7 +6,7 @@ main {
   background-color: var(--primary);
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 h1 {

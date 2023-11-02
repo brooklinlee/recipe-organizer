@@ -5,18 +5,23 @@
 <link 
   rel="stylesheet" 
   type="text/css"
-  href="{% static 'css/ingredients/ingredient_list.css' %}"
+  href="{% static 'css/recipes/ingredients/ingredient_list.css' %}"
   />
 {% endblock %}
 
 {% block content %}
-
-<h1>All Ingredients</h1>
-{% for ingredient in ingredient_list %}
-  <a href="{% url 'ingredient-detail' ingredient.id %}">
-    <h3>{{ ingredient.name }}</h3>
-    <h3>{{ ingredient.food_group }}</h3>
-  </a>
-{% endfor %}
+<main>
+<h1>Ingredients</h1>
+<div class="ing-card-container">
+  {% for ingredient in ingredient_list %}
+  <div class="ingredient-card">
+    <a href="{% url 'ingredient-detail' ingredient.id %}">
+      <h3>{{ ingredient.name }}</h3>
+      <h3>{{ ingredient.food_group }}</h3>
+    </a>
+  </div>
+    {% endfor %}
+</div>
+</main>
 
 {% endblock %}
