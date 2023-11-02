@@ -11,6 +11,11 @@ h1 {
   margin-bottom: 0;
 }
 
+h3 {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .cuisine {
   /* color: var(--primary); */
   font-size: 24px;
@@ -78,3 +83,40 @@ button {
   align-content: space-around;
   flex-wrap: wrap;
 }
+
+.avail-cont {
+  border: solid var(--primary);
+  width: 90%;
+  margin: 24px auto;
+  border-radius: 16px;
+}
+
+.add-ing{
+  font-weight: 800;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.individual-ing {
+  border: solid var(--primary);
+  margin: 16px auto;
+  border-radius: 16px;
+  width: 250px;
+  height: 200px;
+  display: inline;
+  padding: 10px 24px;
+}
+
+.add-btn {
+  margin: 0 auto;
+  float: right;
+  bottom: 0;
+  
+}
+

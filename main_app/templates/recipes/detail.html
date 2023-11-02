@@ -50,22 +50,25 @@
         {% endif %}
       </div>  
     </div>
-    <div>
-      <h3>Available Ingredients</h3>
-      <!-- display available ingredients here -->
-      {% if ingredients.count %}
-        {% for ingredient in ingredients.all %}
-          <a href="{% url 'ingredient-detail' ingredient.id %}">
-            <p>{{ ingredient.name }} - <em>{{ ingredient.food_group }}</em></p>
-          </a>
-          <form action="{% url 'assoc-ingredient' recipe.id ingredient.id %}" method="post">
-            {% csrf_token %}
-            <button type="submit" >Add Ingredient to Recipe</button>
-          </form>
-        {% endfor %}
-      {% else %}
-        <p>{{ recipe.name }} already has all the available ingredients </p>
-      {% endif%}    
+    <div class="avail-cont">
+      <h1 class="ing-label">Available Ingredients</h1>
+      <div class="add-ing">
+        {% if ingredients.count %}
+          {% for ingredient in ingredients.all %}
+          <div class="individual-ing">
+            <a href="{% url 'ingredient-detail' ingredient.id %}">
+              <p>{{ ingredient.name }} - <em>{{ ingredient.food_group }}</em></p>
+            </a>
+            <form action="{% url 'assoc-ingredient' recipe.id ingredient.id %}" method="post">
+              {% csrf_token %}
+              <button type="submit" class="add-btn">+</button>
+            </form>
+          </div>
+          {% endfor %}
+        {% else %}
+          <p>{{ recipe.name }} already has all the available ingredients </p>
+        {% endif%}    
+      </div>
     </div>
   </div>
   <div>
