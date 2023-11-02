@@ -2,16 +2,22 @@
 {% load static %}
 
 {% block head %}
-<!-- stylesheet link -->
+<link 
+  rel="stylesheet" 
+  type="text/css"
+  href="{% static 'css/delete-confirm.css' %}"
+  />
 {% endblock %}
 
 {% block content%}
 
-<h1>Are you sure you want to delete {{ recipe.name }}?</h1>
-<form action="" method="post" class="form">
-  {% csrf_token %}
-  <a href="{% url 'recipe-detail' recipe.id %}">Cancel</a>
-  <button type="submit">Delete</button>
-</form>
+<main>
+  <h1>Are you sure you want to delete {{ recipe.name }}?</h1>
+  <form action="" method="post" class="form">
+    {% csrf_token %}
+    <a href="{% url 'recipe-detail' recipe.id %}"><button>Cancel</button></a>
+    <button type="submit">Delete</button>
+  </form>
+</main>
 
 {% endblock %}

@@ -5,20 +5,14 @@
 html, body {
   margin: 0;
   height: 100vh;
-  /* background-color: var(--background); */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family:'Raleway', sans-serif;
   background-color: var(--background);
-  /* background-image: url('../images/YumYumHub.svg');
-  background-repeat: no-repeat;
-  background-size: cover; */
-  
   --primary: #D66049;
   --background: #FBF4EF;
   --border: rgb(220, 220, 220);
 }
-
 
 #root {
   height: 100%;
@@ -68,7 +62,6 @@ a {
   font-weight: 800;
   text-decoration: none;
 }
-
 
 /* Nav Bar */
 .container {
