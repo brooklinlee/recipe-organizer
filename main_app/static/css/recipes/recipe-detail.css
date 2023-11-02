@@ -71,6 +71,7 @@ button {
 .ing-label {
   font-size: 35px;
   margin: 0 auto;
+  padding: 24px 0;
 }
 
 .ing-list {
@@ -108,7 +109,7 @@ button {
   margin: 16px auto;
   border-radius: 16px;
   width: 250px;
-  height: 200px;
+  height: 180px;
   display: inline;
   padding: 10px 24px;
 }
@@ -117,6 +118,9 @@ button {
   margin: 0 auto;
   float: right;
   bottom: 0;
-  
 }
 
+form {
+  display: flex;
+  justify-content: center;
+}
