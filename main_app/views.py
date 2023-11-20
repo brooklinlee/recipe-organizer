@@ -39,7 +39,7 @@ class RecipeCreate(LoginRequiredMixin, CreateView):
 
 class RecipeUpdate(LoginRequiredMixin, UpdateView):
   model = Recipe
-  fields = '__all__'
+  fields = ['name', 'cuisine', 'time', 'feeds', 'recipe']
 
 class RecipeDelete(LoginRequiredMixin, DeleteView):
   model = Recipe
